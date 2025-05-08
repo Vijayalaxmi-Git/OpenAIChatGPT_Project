@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 依据上下文中的表信息，生成SQL语句
+    /// Generate SQL statements based on the table information in the context
     /// </summary>
     public class SQLTranslate : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciCode;
-        private readonly string _prompt = "### Mysql SQL tables, 表字段信息如下:\\\n#\\\n# Employee(id, name, department_id)\\\n# Department(id, name, address)\\\n# Salary_Payments(id, employee_id, amount, date)\\\n#\\\n### 创建表的语法\\\n CREATE";
+        private readonly string _prompt = "### Mysql SQL tables, Table Information:\\\n#\\\n# Employee(id, name, department_id)\\\n# Department(id, name, address)\\\n# Salary_Payments(id, employee_id, amount, date)\\\n#\\\n### Syntax\\\n CREATE";
 
         public SQLTranslate(OpenAISetting openAISetting)
         {

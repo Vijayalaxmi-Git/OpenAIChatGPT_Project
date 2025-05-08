@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 依据现有知识库问&答
+    /// Question & Answer based on existing knowledge base
     /// </summary>
     public class QnA : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "Q: 今天深圳的天气咋样?\nA:";
+        private readonly string _prompt = "Q:How's the weather in Texas today?\nA:";
         private readonly string _endToken = "\n";
 
         public QnA(OpenAISetting openAISetting)

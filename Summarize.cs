@@ -16,7 +16,7 @@ namespace OpenAIChatGPTSample
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "Summarize this for a second-grade student:\\n虽然我国国土辽阔，但我们要确保十三亿的人的衣食住行。我们的生活富裕了，但能源能不能持续跟上呢?希望大家能够利用废物，节约地球能源，善待地球环境，从身边的小事做起，从我做起，保护环境。还要呼吁大家共同保护赖以生存的家园!";
+        private readonly string _prompt = "Summarize this for a second-grade student:\\nHow to Make Your Own Copy of a Project!";
         private readonly string _endToken = "\n";
 
         public Summarize(OpenAISetting openAISetting)

@@ -5,8 +5,8 @@ using System.Diagnostics.CodeAnalysis;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// https://blog.csdn.net/luoxueyong/article/details/128360680
-    /// openapi的49种模式中，支持论文创作、代码生成、SQL生成、代码解释、程序代码翻译等多种有趣的玩法，各位小伙伴一起玩起来
+    /// Among the 49 modes of openapi, it supports a variety of interesting ways to play, 
+    /// such as paper creation, code generation, SQL generation, code interpretation, program code translation, etc. Let's play together
     /// </summary>
     internal class OpenAICommand : Command<OpenAICommand.Settings>
     {
@@ -57,7 +57,7 @@ namespace OpenAIChatGPTSample
 
         public sealed class Settings : CommandSettings
         {
-            [Description("模式")]
+            [Description("mode")]
             [CommandArgument(0, "[mode]")]
             public string? Mode { get; init; }
 

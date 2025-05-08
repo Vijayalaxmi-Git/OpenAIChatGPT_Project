@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 把一种语法翻译成其它几种语言
+    /// Translate a grammar into several other languages
     /// </summary>
-    public  class Translate2Other : IGPTRuner
+    public class Translate2Other : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "Translate this into 1. French, 2. Spanish and 3. English:\n这是什么地方?";
+        private readonly string _prompt = "Translate this into 1. French, 2. Spanish and 3. English:\\What is this place??";
 
         public Translate2Other(OpenAISetting openAISetting)
         {

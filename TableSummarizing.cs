@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 对于非结构化的数据抽取其中的特征生成结构化的表格
+    /// Extract features from unstructured data to generate structured tables
     /// </summary>
     public class TableSummarizing : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "A table summarizing, use Chinese:\\n我是一个活泼可爱的小女孩，我有着一双水灵灵的大眼睛；弯弯的眉毛像月亮一样；高高的鼻子下面有一张粉红色的樱桃小嘴。\\n";
+        private readonly string _prompt = "A table summarizing, use English:\\nI am a lively and lovely little girl. I have a pair of big watery eyes, curved eyebrows like the moon, and a pink cherry mouth under the high nose.\\n";
 
         public TableSummarizing(OpenAISetting openAISetting)
         {

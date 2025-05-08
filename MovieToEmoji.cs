@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 文字转表情符号,将文本编码成表情服务
+    /// Text to emoticon, encoding text into emoticon service
     /// </summary>
     public class MovieToEmoji : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "转换文字为表情。\n我现在非常生气：";
+        private readonly string _prompt = "Convert text to emoticon. \nI am very angry now：";
         private readonly string _endToken = "\n";
 
 

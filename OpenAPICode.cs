@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 一句话生成OpenAi的代码
+    /// Generate OpenAi code in one sentence
     /// </summary>
     public class OpenAPICode : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciCode;
-        private readonly string _prompt = "\\\"\\\"\\\"\nUtil exposes the following:\nutil.openai() -> authenticates & returns the openai module, which has the following functions:\nopenai.Completion.create(\n    prompt=\\\"<my prompt>\\\", # The prompt to start completing from\n    max_tokens=123, # The max number of tokens to generate\n    temperature=1.0 # A measure of randomness\\n    echo=True, # Whether to return the prompt in addition to the generated completion\\\\n)\\\\n\\\\\\\"\\\\\\\"\\\\\\\"\\\\nimport util\\\\n\\\\\\\"\\\\\\\"\\\\\\\"\\\\n创建一个OpenAI completion，提示是“你好”，最大令牌时5\\\\n\\\\\\\"\\\\\\\"\\\\\\\"\\\\n\\\\n\r\n";
+        private readonly string _prompt = "\\\"\\\"\\\"\nUtil exposes the following:\nutil.openai() -> authenticates & returns the openai module, which has the following functions:\nopenai.Completion.create(\n    prompt=\\\"<my prompt>\\\", # The prompt to start completing from\n    max_tokens=123, # The max number of tokens to generate\n    temperature=1.0 # A measure of randomness\\n    echo=True, # Whether to return the prompt in addition to the generated completion\\\\n)\\\\n\\\\\\\"\\\\\\\"\\\\\\\"\\\\nimport util\\\\n\\\\\\\"\\\\\\\"\\\\\\\"\\\\OpenAI completion\\\\n\r\n";
         private readonly string _endToken = "\"\"\"";
 
         public OpenAPICode(OpenAISetting openAISetting)
