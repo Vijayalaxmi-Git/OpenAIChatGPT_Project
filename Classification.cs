@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 把一段信息 分类
+    /// Categorize a piece of information
     /// </summary>
     public class Classification : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "好似在唱着优美动听的歌\\n分类:";
+        private readonly string _prompt = "It seems to be singing a beautiful song.:";
 
 
         public Classification(OpenAISetting openAISetting)

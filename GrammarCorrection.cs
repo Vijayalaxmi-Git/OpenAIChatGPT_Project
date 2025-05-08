@@ -10,13 +10,13 @@ using System.Threading.Tasks;
 namespace OpenAIChatGPTSample
 {
     /// <summary>
-    /// 语法纠正,将句子转换成标准的英语，输出结果始终是英文
+    ///Grammar correction, convert sentences into standard English, the output is always in English
     /// </summary>
     public class GrammarCorrection : IGPTRuner
     {
         private readonly OpenAISetting _openAISetting;
         private readonly Model CHATGPT_MODEL = Model.DavinciText;
-        private readonly string _prompt = "下半夜,突然雷声隆隆,接着电光闪闪。";
+        private readonly string _prompt = "In the middle of the night, there was a sudden rumble of thunder, followed by flashes of lightning.。";
    
 
         public GrammarCorrection(OpenAISetting openAISetting)
